@@ -1,6 +1,5 @@
 from device import TV, Light
 
-# Телевизоры
 class SonyTV(TV):
     def turn_on(self):
         print("Sony TV: Включение")
@@ -23,7 +22,6 @@ class SamsungTV(TV):
         print(f"Samsung TV: Переключение на канал {channel}")
 
 
-# Лампочки
 class PhilipsLight(Light):
     def turn_on(self):
         print("Philips Light: Включение")

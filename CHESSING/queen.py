@@ -19,13 +19,11 @@ class Queen(Figure):
         row_diff = abs(to_row - from_row)
         col_diff = abs(to_col - from_col)
 
-        # Проверка: ход по прямой (горизонталь/вертикаль) или диагонали
         straight = row_diff == 0 or col_diff == 0
         diagonal = row_diff == col_diff
         if not (straight or diagonal):
             return False
 
-        # Определение направления движения
         row_step = 0
         if to_row > from_row:
             row_step = 1
@@ -38,11 +36,11 @@ class Queen(Figure):
         elif to_col < from_col:
             col_step = -1
 
-        # Проверка промежуточных клеток
+
         row, col = from_row + row_step, from_col + col_step
         while (row, col) != (to_row, to_col):
             if board.get_item(row, col) is not None:
-                return False  # Препятствие на пути
+                return False
             row += row_step
             col += col_step
 

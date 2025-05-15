@@ -2,7 +2,6 @@ from factory import ElectricCarFactory, PetrolCarFactory, HybridCarFactory
 
 
 def main():
-    # Словарь: строка -> фабрика
     factory_mapping = {
         "electric": ElectricCarFactory(),
         "petrol": PetrolCarFactory(),
